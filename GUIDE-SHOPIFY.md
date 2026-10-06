@@ -30,6 +30,14 @@ Dans l'administration Shopify (`admin.shopify.com`) :
 
 ## Étape 2 — Créer les 3 produits
 
+**Méthode rapide (recommandée) : importer le fichier tout prêt.**
+Dans *Produits*, clique sur **Importer**, choisis `shopify/produits-lenvol.csv`,
+puis valide l'import. Les 3 t-shirts sont créés avec leurs 10 variantes
+(Blanc/Marine × XS–XL), leurs prix, leurs photos, leur description et la vente
+sans stock déjà activée. Passe ensuite directement au point 3 de l'étape 3.
+
+**Méthode manuelle** (si l'import ne fonctionne pas) :
+
 **Produits → Ajouter un produit**, trois fois :
 
 | Titre               | Prix  | Identifiant (handle) |
