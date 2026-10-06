@@ -39,7 +39,7 @@ window.SITE_CONFIG = {
    */
   shopify: {
     shopDomain: "cdrgg3-i0.myshopify.com",
-    storefrontToken: "",       // ex. "a1b2c3d4e5f6..."
+    storefrontToken: "70893a2e48d3620fc4f76c29acd0b253",
     apiVersion: "2025-07",
     // Noms des options tels qu'écrits dans Shopify
     colorOptionName: "Couleur",
