@@ -38,7 +38,7 @@ window.SITE_CONFIG = {
    * bouton de paiement affiche un message « bientôt disponible ».
    */
   shopify: {
-    shopDomain: "",            // ex. "gregoire-vds.myshopify.com"
+    shopDomain: "cdrgg3-i0.myshopify.com",
     storefrontToken: "",       // ex. "a1b2c3d4e5f6..."
     apiVersion: "2025-07",
     // Noms des options tels qu'écrits dans Shopify
