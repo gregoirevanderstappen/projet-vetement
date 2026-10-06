@@ -1,4 +1,4 @@
-/* Fiche produit (produit.html?modele=…&couleur=…) */
+/* Fiche produit (produit.html#modele-couleur, ex. produit.html#ciel-marine) */
 (function () {
   "use strict";
 
@@ -6,9 +6,9 @@
   var S = window.Shop;
   var IMG = "assets/img/produits/";
 
-  var params = new URLSearchParams(location.search);
-  var p = S.findProduct(params.get("modele")) || COL.products[0];
-  var color = p.images[params.get("couleur")] ? params.get("couleur") : Object.keys(p.images)[0];
+  var hash = location.hash.slice(1).split("-");
+  var p = S.findProduct(hash[0]) || COL.products[0];
+  var color = p.images[hash[1]] ? hash[1] : Object.keys(p.images)[0];
   var size = null;
   var view = 0;
 
@@ -63,7 +63,7 @@
     var b = e.target.closest(".swatch");
     if (!b) return;
     color = b.dataset.color;
-    history.replaceState(null, "", "?modele=" + p.id + "&couleur=" + color);
+    history.replaceState(null, "", "#" + p.id + "-" + color);
     paint();
   });
 
@@ -120,11 +120,12 @@
   /* Autres modèles */
   document.getElementById("more").innerHTML = COL.products.filter(function (x) { return x.id !== p.id; }).map(function (x) {
     var c = x.images[color] ? color : Object.keys(x.images)[0];
-    return '<a class="card card--link" href="produit.html?modele=' + x.id + "&couleur=" + c + '">' +
+    return '<a class="card card--link" href="produit.html#' + x.id + "-" + c + '">' +
       '<span class="card__media"><img class="card__front" src="' + IMG + x.images[c][x.cover] + '" alt="' + S.esc(x.name) + '" loading="lazy">' +
       '<img class="card__back" src="' + IMG + x.images[c][1 - x.cover] + '" alt="" loading="lazy"></span>' +
       '<span class="card__body"><span class="card__row"><span class="card__name">' + S.esc(x.name) + "</span>" +
       '<span class="card__price">' + S.euro(x.price) + "</span></span>" +
       '<span class="card__tag">' + S.esc(x.tagline) + "</span></span></a>";
   }).join("");
+  window.addEventListener("hashchange", function () { location.reload(); });
 })();

@@ -4,7 +4,7 @@ Site de présentation et de précommande de la collection de t-shirts **L'Envol*
 
 - `index.html` : la page de la collection (histoire, modèles, précommande,
   matière, FAQ)
-- `produit.html` : la fiche d'un modèle (`produit.html?modele=ciel&couleur=marine`)
+- `produit.html` : la fiche d'un modèle (`produit.html#ciel-marine`)
 - `assets/js/config.js` : **les réglages** (menu, dates de précommande, Shopify)
 - `assets/js/products.js` : les modèles, les prix, les textes et les photos
 - `assets/img/produits/` : les photos, une vue de face (`-avant`) et une vue de

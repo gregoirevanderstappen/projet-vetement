@@ -17,14 +17,14 @@
     }).join("");
     var first = Object.keys(p.images)[0];
     return '<article class="card reveal" data-id="' + p.id + '">' +
-      '<a class="card__media" href="produit.html?modele=' + p.id + "&couleur=" + first + '">' +
+      '<a class="card__media" href="produit.html#' + p.id + "-" + first + '">' +
         '<img class="card__front" src="' + IMG + p.images[first][p.cover] + '" alt="' + S.esc(p.name) + '" loading="lazy">' +
         '<img class="card__back" src="' + IMG + p.images[first][1 - p.cover] + '" alt="" loading="lazy">' +
         '<span class="tag">Précommande</span>' +
       "</a>" +
       '<div class="card__body">' +
         '<div class="card__row">' +
-          '<h3 class="card__name"><a href="produit.html?modele=' + p.id + "&couleur=" + first + '">' + S.esc(p.name) + "</a></h3>" +
+          '<h3 class="card__name"><a href="produit.html#' + p.id + "-" + first + '">' + S.esc(p.name) + "</a></h3>" +
           '<p class="card__price">' + S.euro(p.price) + "</p>" +
         "</div>" +
         '<p class="card__tag">' + S.esc(p.tagline) + "</p>" +
@@ -43,7 +43,7 @@
     card.querySelector(".card__front").src = IMG + p.images[c][p.cover];
     card.querySelector(".card__back").src = IMG + p.images[c][1 - p.cover];
     card.querySelectorAll("a[href^='produit.html']").forEach(function (a) {
-      a.href = "produit.html?modele=" + p.id + "&couleur=" + c;
+      a.href = "produit.html#" + p.id + "-" + c;
     });
     card.querySelectorAll(".swatch").forEach(function (s) {
       s.classList.toggle("is-active", s === b);

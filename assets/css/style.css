@@ -120,7 +120,7 @@ button:disabled { cursor: not-allowed; }
 
 .site-header {
   position: sticky;
-  top: 0;
+  top: env(safe-area-inset-top, 0px);
   z-index: 50;
   background: rgba(244, 242, 238, .92);
   backdrop-filter: saturate(1.4) blur(10px);
@@ -266,8 +266,7 @@ button:disabled { cursor: not-allowed; }
 .hero {
   display: grid;
   grid-template-columns: 1.05fr 1fr;
-  min-height: calc(100vh - var(--header-h) - 36px);
-  min-height: calc(100svh - var(--header-h) - 36px);
+  min-height: clamp(520px, 78vh, 820px);
 }
 .hero__media { position: relative; background: var(--surface); overflow: hidden; }
 .hero__media img {
@@ -514,7 +513,7 @@ details[open] > summary::after { transform: rotate(45deg); }
 
 /* ---------- Apparition au défilement ---------- */
 
-.reveal { opacity: 0; transform: translateY(18px); transition: opacity .9s var(--ease), transform .9s var(--ease); }
+.reveal { transform: translateY(14px); transition: transform .9s var(--ease); }
 .reveal.is-visible { opacity: 1; transform: none; }
 .grid .reveal:nth-child(2) { transition-delay: .1s; }
 .grid .reveal:nth-child(3) { transition-delay: .2s; }
