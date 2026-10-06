@@ -12,7 +12,7 @@
   var size = null;
   var view = 0;
 
-  document.title = p.name + " | Grégoire van der Stappen";
+  document.title = p.name + " | Grégoire Vanderstappen";
   document.getElementById("crumb-name").textContent = p.name;
 
   var root = document.getElementById("product");

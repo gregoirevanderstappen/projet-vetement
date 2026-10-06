@@ -6,7 +6,7 @@ window.SITE_CONFIG = {
   /* ---- Menu (les trois barres) ----------------------------------------
    * Vérifie que chaque lien correspond bien à une page de ton site actuel.
    */
-  siteName: "Grégoire van der Stappen",
+  siteName: "Grégoire Vanderstappen",
   homeUrl: "https://gregoirevanderstappen.com/",
   menu: [
     { label: "Accueil", href: "https://gregoirevanderstappen.com/" },

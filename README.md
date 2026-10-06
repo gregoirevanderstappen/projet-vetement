@@ -1,4 +1,4 @@
-# L'Envol — collection textile de Grégoire van der Stappen
+# L'Envol — collection textile de Grégoire Vanderstappen
 
 Site de présentation et de précommande de la collection de t-shirts **L'Envol**.
 
