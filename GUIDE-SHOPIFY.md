@@ -43,8 +43,7 @@ Pour chacun :
 1. **Variantes** : clique sur *« Ajouter des options comme la taille ou la
    couleur »*. Crée exactement ces deux options :
    - Option `Couleur` avec les valeurs `Blanc` et `Marine`
-   - Option `Taille` avec les valeurs `XXS`, `XS`, `S`, `M`, `L`, `XL`, `XXL`,
-     `3XL`, `4XL`, `5XL`
+   - Option `Taille` avec les valeurs `XS`, `S`, `M`, `L`, `XL`
 
    ⚠️ L'orthographe doit être identique, majuscules et accents compris.
    C'est comme ça que le site retrouve la bonne variante.

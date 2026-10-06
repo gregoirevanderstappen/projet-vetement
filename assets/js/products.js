@@ -4,7 +4,7 @@
  */
 window.COLLECTION = {
   name: "L'Envol",
-  sizes: ["XXS", "XS", "S", "M", "L", "XL", "XXL", "3XL", "4XL", "5XL"],
+  sizes: ["XS", "S", "M", "L", "XL"],
   colors: {
     blanc: { label: "Blanc", swatch: "#f7f6f2" },
     marine: { label: "Marine", swatch: "#1f2a44" }
@@ -12,7 +12,7 @@ window.COLLECTION = {
   specs: {
     weight: "180 g/m²",
     fit: "Medium Fit",
-    sizes: "XXS – 5XL",
+    sizes: "XS – XL",
     details: [
       "Côte 1x1 au col",
       "Bande de propreté intérieur col dans la matière principale",
